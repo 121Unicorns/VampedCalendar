@@ -7,43 +7,52 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/header"
-        android:gravity="center"
         android:background="#8C0000"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/btnPrev"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="left"
             android:background="@drawable/ic_arrow_left"
-            android:padding="12dp"/>
+            android:backgroundTint="@color/colorLight"
+            app:layout_constraintLeft_toLeftOf="@id/tvMonth"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/tvMonth"
             android:gravity="center"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorLight"
             android:textSize="25sp"
+            android:letterSpacing="0.1"
             android:text="2021"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            app:layout_constraintRight_toRightOf="@id/btnPrev"
+            app:layout_constraintLeft_toLeftOf="@id/btnNext"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageButton
             android:id="@+id/btnNext"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="right"
-            android:layout_marginEnd="10dp"
-            android:padding="12dp"
-            android:background="@drawable/ic_arrow_right"/>
+            android:paddingRight="@dimen/cardview_compat_inset_shadow"
+            android:backgroundTint="@color/colorLight"
+            android:background="@drawable/ic_arrow_right"
+            app:layout_constraintRight_toRightOf="@id/tvMonth"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/calendar_layout"
@@ -58,9 +67,7 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header">
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/tv_sun"
