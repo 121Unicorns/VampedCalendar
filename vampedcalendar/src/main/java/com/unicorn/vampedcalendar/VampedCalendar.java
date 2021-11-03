@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,10 +32,11 @@ import static com.unicorn.vampedcalendar.utils.CalendarUtils.getCalendarKey;
 public class VampedCalendar extends LinearLayout {
 
     public enum EventShape {
-        CIRCLE, SQUARE, ROUNDED_SQUARE, DOT
+        CIRCLE, SQUARE, ROUNDED_SQUARE, DOT, HEART
     }
 
-    private LinearLayout header, dayLabel, calendar;
+    private LinearLayout dayLabel, calendar;
+    private ConstraintLayout header;
     private RecyclerView calendarGrid;
     private TextView sTv, monthTv;
     private ImageButton prevBtn;

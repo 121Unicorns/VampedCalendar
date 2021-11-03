@@ -19,7 +19,9 @@ public class GraphicUtils {
             drawable = R.drawable.background_square;
         } else if (eventShape == VampedCalendar.EventShape.DOT) {
             drawable = R.drawable.background_dots;
-        } else {
+        } else if (eventShape == VampedCalendar.EventShape.HEART) {
+            drawable = R.drawable.background_heart;
+        }{
             drawable = R.drawable.background_circle;
         }
 
