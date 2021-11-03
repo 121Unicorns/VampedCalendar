@@ -13,14 +13,14 @@ public class GraphicUtils {
 
     public static void setDayColor(TextView tv, int color, int textColor, @NonNull VampedCalendar.EventShape eventShape) {
         int drawable;
-        if (eventShape == VampedCalendar.EventShape.CIRCLE) {
-            drawable = R.drawable.background_circle;
+        if (eventShape == VampedCalendar.EventShape.ROUNDED_SQUARE) {
+            drawable = R.drawable.background_square_rounded;
         } else if (eventShape == VampedCalendar.EventShape.SQUARE) {
             drawable = R.drawable.background_square;
         } else if (eventShape == VampedCalendar.EventShape.DOT) {
             drawable = R.drawable.background_dots;
         } else {
-            drawable = R.drawable.background_square_rounded;
+            drawable = R.drawable.background_circle;
         }
 
         setDayColors(tv, textColor, Typeface.NORMAL, drawable);
