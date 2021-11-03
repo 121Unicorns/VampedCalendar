@@ -21,7 +21,7 @@ public class GraphicUtils {
             drawable = R.drawable.background_dots;
         } else if (eventShape == VampedCalendar.EventShape.HEART) {
             drawable = R.drawable.background_heart;
-        }{
+        } else {
             drawable = R.drawable.background_circle;
         }
 

@@ -3,10 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:background="#363636"
     tools:context=".MainActivity">
 
     <com.unicorn.vampedcalendar.VampedCalendar
         android:id="@+id/vCalendar"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -7,11 +7,19 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/calendar_background"
+        android:backgroundTint="@color/colorDefault"
+        android:orientation="vertical">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/header"
-        android:background="#8C0000"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +61,11 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/colorLight"/>
 
     <LinearLayout
         android:id="@+id/calendar_layout"
@@ -150,7 +163,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="S"
                 android:textAlignment="center"
-                android:textColor="@color/colorDefault"
+                android:textColor="#FA8787"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -164,5 +177,7 @@
             android:fontFamily="sans-serif-light"
             tools:listitem="@layout/day_layout" />
     </LinearLayout>
+
+</LinearLayout>
 
 </LinearLayout>
