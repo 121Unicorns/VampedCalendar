@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:id="@+id/header"
         android:gravity="center"
-        android:background="@color/colorDefault"
+        android:background="#8C0000"
         android:orientation="horizontal">
 
         <ImageButton
