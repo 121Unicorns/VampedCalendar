@@ -15,6 +15,7 @@ import com.unicorn.vampedcalendar.model.EventDate;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,15 +33,17 @@ public class MainActivity extends AppCompatActivity {
         //vampedCalendar.setNoEventDayShape(VampedCalendar.EventShape.DOT);
         //vampedCalendar.setNoEventDayBackgroundColor(getResources().getColor(R.color.purple_700));
 
-        //vampedCalendar.setBackgroundColor(getResources().getColor(R.color.secondary_dark_red));
-
         List<Event> events = new ArrayList<>();
 
         //calendar for creating event
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        //calendar.set(Calendar.DAY_OF_MONTH, 1);
 
-        //event with dots at the bottom shape
+        EventDate eventDate = new EventDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));//calendar starts from 0 for january
+        events.add(new Event(eventDate, getResources().getColor(R.color.primary_red), VampedCalendar.EventShape.CIRCLE));
+        vampedCalendar.setEvents(events);
+
+        /*//event with dots at the bottom shape
         for (int i = 0; i < 5; i++) {
             calendar.add(Calendar.DAY_OF_MONTH, 1);
             EventDate eventDate = new EventDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));//calendar starts from 0 for january
@@ -49,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Set events to calendar
         vampedCalendar.setEvents(events);
+
+         */
 
         //onDateClickListener
         vampedCalendar.setOnDateClickedListener(new OnDateClickedListener() {

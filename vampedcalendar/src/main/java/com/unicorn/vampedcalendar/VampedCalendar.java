@@ -77,7 +77,8 @@ public class VampedCalendar extends LinearLayout {
     private void initElements(View view) {
         header = view.findViewById(R.id.header);
         dayLabel = view.findViewById(R.id.header_days);
-        calendar = view.findViewById(R.id.calendar_layout);
+        //calendar = view.findViewById(R.id.calendar_layout);
+        calendar = view.findViewById(R.id.calendarback);
         sTv = view.findViewById(R.id.tv_sat);
         monthTv = view.findViewById(R.id.tvMonth);
         prevBtn = view.findViewById(R.id.btnPrev);
